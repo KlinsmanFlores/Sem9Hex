@@ -1,0 +1,44 @@
+@tareaSem9_HostAddress = http://localhost:5000
+
+### 1. Registrar Administrador
+POST {{tareaSem9_HostAddress}}/api/Auth/register
+Content-Type: application/json
+
+{
+  "username": "admin_hex",
+  "password": "Password123!",
+  "role": "Admin"
+}
+
+### 2. Login Administrador
+POST {{tareaSem9_HostAddress}}/api/Auth/login
+Content-Type: application/json
+
+{
+  "username": "admin_hex",
+  "password": "Password123!"
+}
+
+### 3. Listar Estudiantes
+GET {{tareaSem9_HostAddress}}/api/Estudiantes
+Accept: application/json
+
+### 4. Crear Estudiante
+POST {{tareaSem9_HostAddress}}/api/Estudiantes
+Content-Type: application/json
+
+{
+  "nombre": "Carlos Mendoza",
+  "edad": 21,
+  "direccion": "Av. Primavera 123",
+  "telefono": "987654321",
+  "correo": "carlos.mendoza@universidad.edu.pe"
+}
+
+### 5. Listar Cursos
+GET {{tareaSem9_HostAddress}}/api/Cursos
+Accept: application/json
+
+### 6. Listar Profesores
+GET {{tareaSem9_HostAddress}}/api/Profesores
+Accept: application/json
